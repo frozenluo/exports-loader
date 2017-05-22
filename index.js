@@ -13,7 +13,7 @@ module.exports = function(content, sourceMap) {
 	var keys = Object.keys(query);
 	if(keys.length == 1 && typeof query[keys[0]] == "boolean") {
 		exports.push("try { module.exports = " + keys[0] + "; } catch (e) {" +
-			     + "__webpack_exports__['default'] = " + keys[0] + "; }");
+			     "__webpack_exports__['default'] = " + keys[0] + "; }");
 	} else {
 		keys.forEach(function(name) {
 			var mod = name;
